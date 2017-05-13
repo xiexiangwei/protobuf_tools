@@ -1,0 +1,13 @@
+message Request_Get_LoginGateInfo 
+{ 
+	 
+}
+
+message RePly_Get_LoginGateInfo 
+{ 
+	required  uint32 	error =1;
+	
+	optional  string 	ip =2;
+	
+	optional  uint32 	port=3;
+}

@@ -1,0 +1,1 @@
+./protoc.exe -I=. --python_out=. LRequest.proto
