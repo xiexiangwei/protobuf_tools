@@ -1,8 +1,10 @@
+//请求获取登录网关
 message Request_Get_LoginGateInfo 
 { 
 	 
 }
 
+//获取登录网关信息返回
 message RePly_Get_LoginGateInfo 
 { 
 	required  uint32 	error =1;
@@ -10,4 +12,10 @@ message RePly_Get_LoginGateInfo
 	optional  string 	ip =2;
 	
 	optional  uint32 	port=3;
+}
+
+//连接登录网关返回
+message Reply_Connect_Logingate
+{
+	required  uint32 	error =1;
 }
