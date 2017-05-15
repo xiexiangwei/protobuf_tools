@@ -19,3 +19,18 @@ message Reply_Connect_Logingate
 {
 	required  uint32 	error =1;
 }
+
+//请求登录
+message Request_Login
+{
+	required  string 	account_name =1;//帐号
+	
+	required  string 	account_pwd  =2;//密码
+}
+
+//请求登录返回
+message Reply_Login
+{
+	required  uint32 	error =1;
+}
+

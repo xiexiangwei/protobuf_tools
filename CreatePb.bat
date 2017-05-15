@@ -13,10 +13,10 @@ set Python_COMPILER_PATH=.\PythonTools\protoc.exe
 ::Python_TARGET_PATH文件生成路径, 最后不要跟“\”符号
 set Python_TARGET_PATH=.
 
-::C#协议文件所在位置
-set CS_PROTOCOL_PATH=D:\U3DPro\xGameClient\Assets\_Scripts
-::Python协议文件所在位置
-set PYTHON_PROTOCOL_PATH=D:\xGame\common
+::项目C#协议文件所在位置
+set CS_PROTOCOL_PATH=C:\xGameClient\Assets\_Scripts\Common
+::项目Python协议文件所在位置
+set PYTHON_PROTOCOL_PATH=C:\xGame\common
 
 
 ::删除之前创建的文件
