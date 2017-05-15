@@ -31,6 +31,8 @@ message Request_Login
 //请求登录返回
 message Reply_Login
 {
-	required  uint32 	error =1;
+	required  uint32 	error =1;		//结果
+	optional  uint32	account_id=2;   //帐号ID
+	optional  string    token=3;		//登陆token
 }
 
