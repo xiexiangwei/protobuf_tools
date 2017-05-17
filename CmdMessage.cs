@@ -131,4 +131,131 @@ namespace CmdMessage
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Request_Get_GameCenter")]
+  public partial class Request_Get_GameCenter : global::ProtoBuf.IExtensible
+  {
+    public Request_Get_GameCenter() {}
+    
+    private uint _account_id;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"account_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public uint account_id
+    {
+      get { return _account_id; }
+      set { _account_id = value; }
+    }
+    private string _token;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"token", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string token
+    {
+      get { return _token; }
+      set { _token = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Reply_Get_GameCenter")]
+  public partial class Reply_Get_GameCenter : global::ProtoBuf.IExtensible
+  {
+    public Reply_Get_GameCenter() {}
+    
+    private uint _error;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"error", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public uint error
+    {
+      get { return _error; }
+      set { _error = value; }
+    }
+
+    private string _gamecenter_ip = "";
+    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"gamecenter_ip", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue("")]
+    public string gamecenter_ip
+    {
+      get { return _gamecenter_ip; }
+      set { _gamecenter_ip = value; }
+    }
+
+    private uint _gamecenter_port = default(uint);
+    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"gamecenter_port", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(uint))]
+    public uint gamecenter_port
+    {
+      get { return _gamecenter_port; }
+      set { _gamecenter_port = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Request_Enter_GameCenter")]
+  public partial class Request_Enter_GameCenter : global::ProtoBuf.IExtensible
+  {
+    public Request_Enter_GameCenter() {}
+    
+    private uint _account_id;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"account_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public uint account_id
+    {
+      get { return _account_id; }
+      set { _account_id = value; }
+    }
+    private string _token;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"token", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string token
+    {
+      get { return _token; }
+      set { _token = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"RePly_Enter_GameCenter")]
+  public partial class RePly_Enter_GameCenter : global::ProtoBuf.IExtensible
+  {
+    public RePly_Enter_GameCenter() {}
+    
+    private uint _error;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"error", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public uint error
+    {
+      get { return _error; }
+      set { _error = value; }
+    }
+
+    private uint _user_id = default(uint);
+    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"user_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(uint))]
+    public uint user_id
+    {
+      get { return _user_id; }
+      set { _user_id = value; }
+    }
+
+    private string _user_name = "";
+    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"user_name", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue("")]
+    public string user_name
+    {
+      get { return _user_name; }
+      set { _user_name = value; }
+    }
+
+    private uint _money = default(uint);
+    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"money", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(uint))]
+    public uint money
+    {
+      get { return _money; }
+      set { _money = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
 }

@@ -14,8 +14,10 @@ set Python_COMPILER_PATH=.\PythonTools\protoc.exe
 set Python_TARGET_PATH=.
 
 ::项目C#协议文件所在位置
-set CS_PROTOCOL_PATH=C:\xGameClient\Assets\_Scripts\Common
+::set CS_PROTOCOL_PATH=C:\xGameClient\Assets\_Scripts\Common
+set CS_PROTOCOL_PATH=D:\U3DPro\xGameClient\Assets\_Scripts\Common
 ::项目Python协议文件所在位置
+::set PYTHON_PROTOCOL_PATH=C:\xGame\common
 set PYTHON_PROTOCOL_PATH=C:\xGame\common
 
 

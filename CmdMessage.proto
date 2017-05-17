@@ -47,6 +47,22 @@ message Reply_Get_GameCenter
 	optional  uint32    gamecenter_port=3; //游戏中心端口
 }
 
+//请求进入游戏中心
+message Request_Enter_GameCenter
+{ 
+	required  uint32 	account_id =1;//帐号ID
+	required  string 	token =2;	  //token 
+}
+
+//请求进入游戏中心返回
+message RePly_Enter_GameCenter
+{ 
+	required  uint32 	error=1;
+	optional  uint32 	user_id =2;//玩家ID
+	optional  string 	user_name =3;//玩家昵称
+	optional  uint32 	money =4;//金币数量
+}
+
 
 
 
