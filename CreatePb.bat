@@ -37,7 +37,7 @@ for /f "delims=" %%i in ('dir /b "%SOURCE_FOLDER%\*.proto"') do (
     
 )
 
-echo 协议生成完毕。
+echo createsucces!!!!!!!
 
 ::替换旧的文件
 echo xcopy %CS_TARGET_PATH%\CmdMessage.cs  %CS_PROTOCOL_PATH%\CmdMessage.cs /s /e /y

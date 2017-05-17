@@ -1,16 +1,13 @@
 //请求获取登录网关
 message Request_Get_LoginGateInfo 
-{ 
-	 
+{  
 }
 
 //获取登录网关信息返回
 message RePly_Get_LoginGateInfo 
 { 
 	required  uint32 	error =1;
-	
 	optional  string 	ip =2;
-	
 	optional  uint32 	port=3;
 }
 
@@ -24,7 +21,6 @@ message Reply_Connect_Logingate
 message Request_Login
 {
 	required  string 	account_name =1;//帐号
-	
 	required  string 	account_pwd  =2;//密码
 }
 
@@ -35,4 +31,22 @@ message Reply_Login
 	optional  uint32	account_id=2;   //帐号ID
 	optional  string    token=3;		//登陆token
 }
+
+//请求获取游戏中心信息
+message Request_Get_GameCenter
+{ 
+	required  uint32 	account_id =1;//帐号ID
+	required  string 	token =2;	  //token 
+}
+
+//请求获取游戏中心信息返回
+message Reply_Get_GameCenter
+{ 
+	required  uint32 	error =1;
+	optional  string	gamecenter_ip=2;   //游戏中心IP
+	optional  uint32    gamecenter_port=3; //游戏中心端口
+}
+
+
+
 
