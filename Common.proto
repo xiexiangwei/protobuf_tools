@@ -1,0 +1,11 @@
+//游戏信息结构
+message struct_game_info
+{  
+	required  uint32 	game_type =1; //游戏类型
+	optional  string 	game_ip	=2;	  //游戏服务器IP
+	optional  uint32 	game_port=3;  //游戏服务器端口
+}
+
+
+
+

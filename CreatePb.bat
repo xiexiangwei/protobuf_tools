@@ -14,11 +14,11 @@ set Python_COMPILER_PATH=.\PythonTools\protoc.exe
 set Python_TARGET_PATH=.
 
 ::项目C#协议文件所在位置
-::set CS_PROTOCOL_PATH=C:\xGameClient\Assets\_Scripts\Common
-set CS_PROTOCOL_PATH=D:\U3DPro\xGameClient\Assets\_Scripts\Common
+set CS_PROTOCOL_PATH=C:\xGameClient\Assets\_Scripts\Common
+::set CS_PROTOCOL_PATH=D:\U3DPro\xGameClient\Assets\_Scripts\Common
 ::项目Python协议文件所在位置
-::set PYTHON_PROTOCOL_PATH=C:\xGame\common
 set PYTHON_PROTOCOL_PATH=C:\xGame\common
+::set PYTHON_PROTOCOL_PATH=C:\xGame\common
 
 
 ::删除之前创建的文件
@@ -42,10 +42,13 @@ for /f "delims=" %%i in ('dir /b "%SOURCE_FOLDER%\*.proto"') do (
 echo createsucces!!!!!!!
 
 ::替换旧的文件
-echo xcopy %CS_TARGET_PATH%\CmdMessage.cs  %CS_PROTOCOL_PATH%\CmdMessage.cs /s /e /y
-xcopy %CS_TARGET_PATH%\CmdMessage.cs  %CS_PROTOCOL_PATH%\CmdMessage.cs /s /e /y
-echo xcopy %Python_TARGET_PATH%\CmdMessage_pb2.py %PYTHON_PROTOCOL_PATH%\CmdMessage_pb2.py /s /e /y
-xcopy %Python_TARGET_PATH%\CmdMessage_pb2.py %PYTHON_PROTOCOL_PATH%\CmdMessage_pb2.py /s /e /y
+echo xcopy %CS_TARGET_PATH%\*.cs %CS_PROTOCOL_PATH%\ /y
+xcopy %CS_TARGET_PATH%\*.cs  %CS_PROTOCOL_PATH%\  /y
+
+
+echo xcopy %Python_TARGET_PATH%\*.py %PYTHON_PROTOCOL_PATH%\ /y
+xcopy %Python_TARGET_PATH%\*.py %PYTHON_PROTOCOL_PATH%\  /y
+
 
 
 pause

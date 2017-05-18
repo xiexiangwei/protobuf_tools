@@ -1,3 +1,5 @@
+import "Common.proto";
+
 //请求获取登录网关
 message Request_Get_LoginGateInfo 
 {  
@@ -57,10 +59,11 @@ message Request_Enter_GameCenter
 //请求进入游戏中心返回
 message RePly_Enter_GameCenter
 { 
-	required  uint32 	error=1;
-	optional  uint32 	user_id =2;//玩家ID
-	optional  string 	user_name =3;//玩家昵称
-	optional  uint32 	money =4;//金币数量
+	required  uint32 			error=1;
+	optional  uint32 			user_id =2;		//玩家ID
+	optional  string 			user_name =3;	//玩家昵称
+	optional  uint32 			money =4;		//金币数量
+	repeated  struct_game_info  game_list=5;	//游戏列表	 
 }
 
 
