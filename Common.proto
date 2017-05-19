@@ -2,10 +2,46 @@
 message struct_game_info
 {  
 	required  uint32 	game_type =1; //游戏类型
-	optional  string 	game_ip	=2;	  //游戏服务器IP
-	optional  uint32 	game_port=3;  //游戏服务器端口
+	required  string 	game_ip	=2;	  //游戏服务器IP
+	required  uint32 	game_port=3;  //游戏服务器端口
 }
 
+//玩家数据结构
+message struct_user_info
+{  
+	required  uint32 			user_id =1;		//玩家ID
+	required  string 			user_name =2;	//玩家昵称
+	required  uint32 			money =3;		//金币数量
+}
 
+//房间信息
+message struct_room_info
+{  
+	required  uint32 			room_index =1;		//房间索引
+	required  uint32 			room_type =2;		//房间类型(底注1/底注2/底注3...)
+	required  uint32 			min_money =3;		//最小携带金钱
+	required  uint32 			max_money =4;		//最大携带金钱(0表示不限制)
+	required  uint32 			table_count =5;		//房间内的桌子数量
+	required  uint32 			seat_num =6;		//每张桌子座位数量
+	required  string 			description =7;		//房间说明
+}
+
+//桌子上玩家信息结构
+message struct_table_user_info
+{  
+	required  uint32 			user_id =1;		//玩家ID
+	required  string 			user_name =2;	//玩家昵称
+	required  uint32 			seat_index =3;  //座位号
+	optional  uint32			money=4;		//当前金币
+}
+
+//桌子信息结构
+message struct_table_info
+{  
+	required uint32						table_index 	= 1;   //桌子索引
+	required uint32						table_state 	= 2;   //桌子状态:1正在进行2非正在进行
+	required uint32						table_seat_count= 3;   //桌子座位数量
+	repeated struct_table_user_info 	table_user_list  =4;   //桌子上玩家列表
+}
 
 

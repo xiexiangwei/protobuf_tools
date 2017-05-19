@@ -60,11 +60,68 @@ message Request_Enter_GameCenter
 message RePly_Enter_GameCenter
 { 
 	required  uint32 			error=1;
-	optional  uint32 			user_id =2;		//玩家ID
-	optional  string 			user_name =3;	//玩家昵称
-	optional  uint32 			money =4;		//金币数量
-	repeated  struct_game_info  game_list=5;	//游戏列表	 
+	optional  struct_user_info  user_info=2;	//玩家信息
+	repeated  struct_game_info  game_list=3;	//游戏列表	 
 }
+
+//请求进入游戏
+message Request_Enter_Game
+{ 
+	optional  uint32 			user_id =1;		//玩家ID
+}
+
+//请求进入游戏返回
+message Reply_Enter_Game
+{ 
+	required  uint32 			error=1;		//结果	
+	optional  struct_user_info  user_info=2;    //玩家信息
+	repeated  struct_room_info  room_list=3;    //房间列表
+}
+
+//请求游戏指定房间内某一页的游戏桌子信息
+message Request_Room_Tables_Info
+{ 
+	required  uint32 			room_index=1;	//房间索引	
+	required  uint32 			table_page=2;	//第几页	
+	
+}
+
+//请求游戏指定房间内某一页的游戏桌子信息返回
+message Reply_Room_Tables_Info
+{ 
+	required  uint32 			error=1;		//结果
+	optional  uint32 			table_page=2;	//第几页
+	repeated  struct_table_info table_list=3;	//桌子信息
+}
+
+
+//请求坐在房间内某一桌子
+message Request_Sit
+{ 
+	required  uint32 			room_index=1;	//房间索引
+	required  uint32 			table_index=2;	//桌子索引
+	optional  uint32 			seat_index=3;	//座位索引(如果指定座位号则分配一个空闲座位)
+}
+
+//请求坐在房间内某一桌子返回
+message Reply_Sit
+{ 
+	required  uint32 			error=1;			//结果
+	optional  uint32 			room_index=2;		//房间索引
+	optional  uint32 			table_index=3;		//桌子索引
+	optional  uint32 			seat_index=4;		//座位索引(如果指定座位号则分配一个空闲座位)
+	repeated  struct_table_user_info user_list=5;   //桌上玩家列表
+}
+
+//有玩家进入桌子
+message Broadcast_User_Sit
+{ 
+	required struct_table_user_info new_user =1; //新加入的玩家
+}
+
+
+
+
 
 
 
